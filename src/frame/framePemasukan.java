@@ -66,6 +66,7 @@ public class framePemasukan extends javax.swing.JFrame {
         txtcari = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        Ubah1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -133,6 +134,13 @@ public class framePemasukan extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        Ubah1.setText("cetak");
+        Ubah1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Ubah1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -140,7 +148,7 @@ public class framePemasukan extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE)
                     .addComponent(txtcari)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel3)
@@ -164,14 +172,16 @@ public class framePemasukan extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                         .addComponent(jLabel5)
                         .addGap(70, 70, 70)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 37, Short.MAX_VALUE)
-                                .addComponent(Ubah)
-                                .addGap(33, 33, 33)
-                                .addComponent(jButton2))
-                            .addComponent(txttotal))))
+                        .addComponent(txttotal))
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(Ubah)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Ubah1)
+                        .addGap(10, 10, 10)
+                        .addComponent(jButton2)))
                 .addGap(35, 35, 35))
         );
         layout.setVerticalGroup(
@@ -203,7 +213,8 @@ public class framePemasukan extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
-                    .addComponent(Ubah))
+                    .addComponent(Ubah)
+                    .addComponent(Ubah1))
                 .addGap(18, 18, 18)
                 .addComponent(txtcari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -316,6 +327,11 @@ public class framePemasukan extends javax.swing.JFrame {
         pemasukan.tampilDataAgenda(jTable1, cari);        
     }//GEN-LAST:event_txtcariKeyPressed
 
+    private void Ubah1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Ubah1ActionPerformed
+        // TODO add your handling code here:
+        pemasukan.cetakLaporan("src/laporan/pemasukan.jrxml", "SELECT * FROM tbl_pemasukan");   
+    }//GEN-LAST:event_Ubah1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -353,6 +369,7 @@ public class framePemasukan extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Ubah;
+    private javax.swing.JButton Ubah1;
     private javax.swing.JComboBox<String> combopetugas;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

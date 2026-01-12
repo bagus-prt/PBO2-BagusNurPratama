@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="707ef762-0b45-45da-9bb1-494bcf710dbf">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select * from tbl_pengeluaran;]]>
+	</queryString>
+	<field name="id_pengeluaran" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_petugas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="id_kategori" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tgl_pengeluaran" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nominal" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="keterangan" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="2" width="100" height="20" uuid="70e00996-08d7-4378-ba08-f920c9bb9735"/>
+				<text><![CDATA[id_pengeluaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="103" y="2" width="54" height="20" uuid="32d47ca8-0f6e-4cc7-b496-961d2c599eac"/>
+				<text><![CDATA[id_petugas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="2" width="100" height="20" uuid="ccae5cde-325a-4572-92d5-664248dcbad1"/>
+				<text><![CDATA[id_kategori]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="2" width="100" height="20" uuid="b4899aa0-078f-4efe-aae1-a90b90ebc4e4"/>
+				<text><![CDATA[tgl_pengeluaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="357" y="2" width="100" height="20" uuid="08171e62-9d0a-4502-b9e6-a9a306059ef8"/>
+				<text><![CDATA[nominal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="457" y="2" width="100" height="20" uuid="86984e39-56dc-4251-8c57-3924b05f7867"/>
+				<text><![CDATA[keterangan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="3" y="8" width="100" height="20" uuid="6ca8a2df-a62d-4430-91f1-087c94b238b7"/>
+				<textFieldExpression><![CDATA[$F{id_pengeluaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="103" y="9" width="54" height="20" uuid="3d7c42c7-78b2-4f0c-83a4-e66b48cd51ac"/>
+				<textFieldExpression><![CDATA[$F{id_petugas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="157" y="9" width="100" height="20" uuid="fb21d0e2-2320-4965-9ab0-ab60258bf303"/>
+				<textFieldExpression><![CDATA[$F{id_kategori}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="257" y="10" width="100" height="20" uuid="1349e07e-1f34-43a2-82ee-4e974f9e30f3"/>
+				<textFieldExpression><![CDATA[$F{tgl_pengeluaran}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="357" y="10" width="100" height="20" uuid="19d43554-add8-4dec-806f-267f05a66668"/>
+				<textFieldExpression><![CDATA[$F{nominal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="455" y="10" width="100" height="20" uuid="85fbee91-557b-4b98-a313-bde49a2ee3c5"/>
+				<textFieldExpression><![CDATA[$F{keterangan}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
